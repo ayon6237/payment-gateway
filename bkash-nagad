@@ -1,22 +1,87 @@
 #include <iostream>
 using namespace std;
+
+void enterPin(){
+    int pin;
+    cout<<"Enter PIN number : ";
+    cin>>pin;
+}
+
 //bkash service
 
+
+//send money....................
 void sendMoney(){
     int number,ammount;
-    cout<<"Enter Number:";
-     cin>>number;
+    cout<<"Enter Number : ";
+    cin>>number;
     cout<<endl;
     cout<<"Enter ammount : ";
     cin>>ammount;
+    enterPin();
+    system("cls");
     cout<<endl<<endl;
     cout<<"*************"<<endl;
     cout<<"Send Money is Successfull"<<endl;
     cout<<"Send Money is success to "<<number<<endl;
     cout<<"Ammount is "<<ammount<<endl;
     cout<<"*************";
-    
+
 }
+
+//mobile recharge...............
+void MobileRechargeOperator(){
+    int number,ammount;
+    cout<<"Enter your number : ";
+    cin>>number;
+    cout<<endl;
+    cout<<"Ammount : ";
+    cin>>ammount;
+    enterPin();
+    system("cls");
+    cout<<"*************"<<endl;
+    cout<<"Mobile recharge successful"<<endl;
+    cout<<"Number was : "<<number<<endl;
+    cout<<"Ammount was : "<<ammount<<endl;
+    cout<<"*************";
+}
+void MobileRecharge(){
+    int choice;
+    //sim operator
+    cout<<"1.Grameenphone"<<endl;
+    cout<<"2.Robi"<<endl;
+    cout<<"3.Airtel"<<endl;
+    cout<<"4.Teletalk"<<endl;
+    cin>>choice;
+    system("cls");
+    switch(choice){
+        case 1: MobileRechargeOperator();break;
+        case 2: MobileRechargeOperator();break;
+        case 3: MobileRechargeOperator();break;
+        case 4: MobileRechargeOperator();break;
+    }
+
+}
+
+//payment.................
+void Payment(){
+    int number,ammount;
+    cout<<"Enter Merchant bkash account number : ";
+    cin>>number;
+    cout<<endl;
+    cout<<"Ammount : ";
+    cin>>ammount;
+    enterPin();
+    system("cls");
+    cout<<"*************"<<endl;
+    cout<<"Payment successful"<<endl;
+    cout<<"Number was : "<<number<<endl;
+    cout<<"Ammount was : "<<ammount<<endl;
+    cout<<"*************";
+}
+
+//cash out...............
+
 
 
 void bkash(){
@@ -30,10 +95,11 @@ void bkash(){
     cout<<"7.Reset PIN";
     cout<<endl;
     cin>>choice;
+    system("cls");
     switch(choice){
-        case 1:
-        sendMoney();
-        break;
+        case 1:sendMoney();break;
+        case 2:MobileRecharge();break;
+        case 3:Payment();break;
     }
     cout<<endl;
     cout<<endl;
@@ -52,7 +118,7 @@ void select(){
     else if(choose=="*167#"){
         cout<<"Your Account Balance is : 50,000";
     }
-   
+
 }
 
 
